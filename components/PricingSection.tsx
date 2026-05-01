@@ -70,7 +70,7 @@ export default function PricingSection({ onEnrollClick }: PricingSectionProps) {
               Enroll Now – Secure Your Spot
             </button>
             <p className="text-xs text-[#6B6B6B] mt-4">
-              💚 Only {Math.floor(Math.random() * 3) + 3} spots left in this cohort
+              💚 Only 4 spots left in this cohort
             </p>
           </div>
         </div>
