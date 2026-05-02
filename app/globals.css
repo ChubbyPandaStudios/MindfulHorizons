@@ -7,7 +7,7 @@
   /* Design System - Mindful Horizons */
   
   /* Primary Brand Colors */
-  --color-sage: #6B9E84;
+  --color-sage: #5A8D73;
   --color-cream: #F5F1EC;
   --color-navy: #1A1A2E;
   --color-off-white: #FAFAF7;
@@ -188,5 +188,113 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* --- New Visual Updates --- */
+
+/* Shimmer Sweep Effect */
+.shimmer-sweep {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-sweep::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s;
+}
+.shimmer-sweep:hover::after {
+  left: 100%;
+  top: 100%;
+}
+
+/* Floating Bob Animation */
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float-bob {
+  animation: floatBob 3s ease-in-out infinite;
+}
+
+/* Ripple Effect */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+.ripple-effect span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Accordion Spring Easing */
+.accordion-content[data-state="open"] {
+  animation: accordion-down 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.accordion-content[data-state="closed"] {
+  animation: accordion-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* --- Accessibility: Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-marquee {
+    animation: none !important;
+    transform: none !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  .animate-float-bob {
+    animation: none !important;
+  }
+  
+  .shimmer-sweep::after {
+    display: none !important;
   }
 }

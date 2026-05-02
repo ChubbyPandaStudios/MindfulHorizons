@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
@@ -9,9 +9,40 @@ interface HeaderProps {
 
 export default function Header({ onEnrollClick }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          
+          const totalScroll = document.documentElement.scrollTop;
+          const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scroll = windowHeight > 0 ? totalScroll / windowHeight : 0;
+          
+          setScrollProgress(scroll);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#6B9E84] text-[#FAFAF7] shadow-md">
+    <>
+      {/* Scroll Progress Bar */}
+      <div 
+        className="fixed top-0 left-0 h-[3px] bg-[#5A8D73] z-[60] transition-all duration-150 ease-out origin-left"
+        style={{ transform: `scaleX(${scrollProgress})` }}
+      />
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#5A8D73] shadow-md' : 'bg-transparent backdrop-blur-md'} text-[#FAFAF7]`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -49,7 +80,7 @@ export default function Header({ onEnrollClick }: HeaderProps) {
             </a>
             <button
               onClick={onEnrollClick}
-              className="px-6 py-2 bg-[#FAFAF7] text-[#6B9E84] font-semibold rounded-lg hover:bg-[#F5F1EC] hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              className="px-6 py-2 bg-[#FAFAF7] text-[#5A8D73] font-semibold rounded-lg hover:bg-[#F5F1EC] hover:shadow-lg transition-all duration-300 transform hover:scale-105 shimmer-sweep ripple-effect"
             >
               Enroll Now
             </button>
@@ -71,10 +102,10 @@ export default function Header({ onEnrollClick }: HeaderProps) {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden pb-4 space-y-3 animate-fade-in">
+          <nav className="md:hidden pb-4 space-y-3 animate-fade-in bg-[#5A8D73]/95 px-4 backdrop-blur-md absolute w-full left-0 shadow-lg">
             <a
               href="#about"
-              className="block hover:text-[#F5F1EC] transition-colors"
+              className="block hover:text-[#F5F1EC] transition-colors pt-4"
               onClick={() => setIsMenuOpen(false)}
             >
               About
@@ -105,7 +136,7 @@ export default function Header({ onEnrollClick }: HeaderProps) {
                 onEnrollClick();
                 setIsMenuOpen(false);
               }}
-              className="w-full px-6 py-2 bg-[#FAFAF7] text-[#6B9E84] font-semibold rounded-lg hover:bg-[#F5F1EC] transition-colors"
+              className="w-full px-6 py-2 bg-[#FAFAF7] text-[#5A8D73] font-semibold rounded-lg hover:bg-[#F5F1EC] transition-colors shimmer-sweep ripple-effect"
             >
               Enroll Now
             </button>
@@ -113,5 +144,6 @@ export default function Header({ onEnrollClick }: HeaderProps) {
         )}
       </div>
     </header>
+    </>
   );
 }

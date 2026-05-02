@@ -12,7 +12,7 @@ export default function Footer({ onEnrollClick, onContactClick }: FooterProps) {
     <footer className="bg-[#1A1A2E] text-[#FAFAF7] py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* CTA Section */}
-        <div className="bg-[#6B9E84] rounded-lg p-8 md:p-12 mb-12 text-center animate-fade-in">
+        <div className="bg-[#5A8D73] rounded-lg p-8 md:p-12 mb-12 text-center animate-fade-in">
           <h3 className="text-2xl md:text-3xl font-bold mb-4 text-balance">
             Ready to Transform Your Life?
           </h3>
@@ -21,7 +21,7 @@ export default function Footer({ onEnrollClick, onContactClick }: FooterProps) {
           </p>
           <button
             onClick={onEnrollClick}
-            className="px-8 py-3 bg-[#FAFAF7] text-[#6B9E84] font-semibold rounded-lg hover:bg-[#F5F1EC] transition-all duration-300 transform hover:scale-105"
+            className="px-8 py-3 bg-[#FAFAF7] text-[#5A8D73] font-semibold rounded-lg hover:bg-[#F5F1EC] transition-all duration-300 transform hover:scale-105"
           >
             Enroll Now – Limited Spots Available
           </button>
@@ -42,23 +42,23 @@ export default function Footer({ onEnrollClick, onContactClick }: FooterProps) {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-[#E8E4DE]">
               <li>
-                <a href="#about" className="hover:text-[#6B9E84] transition-colors">
-                  About Dr. Elena
+                <a href="#about" className="hover:text-[#5A8D73] transition-colors">
+                  About
                 </a>
               </li>
               <li>
-                <a href="#benefits" className="hover:text-[#6B9E84] transition-colors">
-                  Program Benefits
+                <a href="#benefits" className="hover:text-[#5A8D73] transition-colors">
+                  Benefits
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-[#6B9E84] transition-colors">
+                <a href="#pricing" className="hover:text-[#5A8D73] transition-colors">
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="hover:text-[#6B9E84] transition-colors">
-                  Success Stories
+                <a href="#testimonials" className="hover:text-[#5A8D73] transition-colors">
+                  Testimonials
                 </a>
               </li>
             </ul>
@@ -66,39 +66,39 @@ export default function Footer({ onEnrollClick, onContactClick }: FooterProps) {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">Get in Touch</h3>
-            <ul className="space-y-2 text-sm text-[#E8E4DE]">
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <ul className="space-y-2 text-[#F5F1EC]/80 text-sm">
               <li>
                 <a
-                  href="mailto:hello@mindfuilhorizons.com"
-                  className="hover:text-[#6B9E84] transition-colors"
+                  href="mailto:hello@mindfuhorizons.com"
+                  className="hover:text-[#5A8D73] transition-colors"
                 >
-                  Email: hello@mindfuilhorizons.com
+                  hello@mindfuhorizons.com
                 </a>
               </li>
               <li>
                 <button
                   onClick={onContactClick}
-                  className="hover:text-[#6B9E84] transition-colors text-left"
+                  className="hover:text-[#5A8D73] transition-colors text-left"
                 >
-                  Contact Us
+                  Send us a message
                 </button>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[#E8E4DE]">
-          <p>&copy; {currentYear} Mindful Horizons. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-[#6B9E84] transition-colors">
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-[#FAFAF7]/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#F5F1EC]/60">
+          <p>© {new Date().getFullYear()} Mindful Horizons. All rights reserved.</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-[#5A8D73] transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-[#6B9E84] transition-colors">
+            <a href="#" className="hover:text-[#5A8D73] transition-colors">
               Terms of Service
             </a>
-            <button onClick={onContactClick} className="hover:text-[#6B9E84] transition-colors">
+            <button onClick={onContactClick} className="hover:text-[#5A8D73] transition-colors">
               Contact
             </button>
           </div>

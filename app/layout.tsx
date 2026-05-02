@@ -53,6 +53,8 @@ export const metadata: Metadata = {
   },
 }
 
+import RippleEffect from '@/components/RippleEffect'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,6 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans antialiased">
+        <RippleEffect />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

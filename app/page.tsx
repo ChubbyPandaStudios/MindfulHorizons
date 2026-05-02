@@ -11,6 +11,7 @@ import FAQSection from '@/components/FAQSection';
 import EnrollModal from '@/components/EnrollModal';
 import ContactModal from '@/components/ContactModal';
 import Footer from '@/components/Footer';
+import { WaveDivider } from '@/components/ui/wave-divider';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,10 +36,24 @@ export default function Home() {
   return (
     <>
       <Header onEnrollClick={handleEnrollClick} />
-      <main className="bg-[#FAFAF7]">
+      <main className="bg-[#FAFAF7] overflow-x-hidden">
         <HeroSection onEnrollClick={handleEnrollClick} />
+        
+        {/* Hero to About transition */}
+        <WaveDivider className="text-[#F5F1EC] -mt-1 bg-[#FAFAF7]" />
+        
         <AboutSection />
+        
+        {/* About to Benefits transition (FAFAF7 -> F5F1EC) */}
+        <div className="bg-[#FAFAF7]">
+           <WaveDivider className="text-[#FAFAF7] rotate-180 bg-[#F5F1EC]" />
+        </div>
+        
         <BenefitsSection />
+        
+        {/* Benefits to Pricing transition (F5F1EC -> FAFAF7) */}
+        <WaveDivider className="text-[#F5F1EC] bg-[#FAFAF7]" />
+        
         <PricingSection onEnrollClick={handleEnrollClick} />
         <TestimonialsSection />
         <FAQSection />

@@ -69,7 +69,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             // Success State
             <div className="text-center space-y-6">
               <div className="flex justify-center">
-                <CheckCircle className="w-16 h-16 text-[#6B9E84]" />
+                <CheckCircle className="w-16 h-16 text-[#5A8D73]" />
               </div>
               <div>
                 <p className="text-lg font-semibold text-[#1A1A2E] mb-2">
@@ -85,21 +85,21 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               {/* Contact Info */}
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="flex gap-3 p-3 bg-[#F5F1EC] rounded-lg">
-                  <Mail className="w-5 h-5 text-[#6B9E84] flex-shrink-0 mt-0.5" />
+                  <Mail className="w-5 h-5 text-[#5A8D73] flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-xs font-semibold text-[#6B6B6B]">Email</p>
                     <p className="text-sm text-[#1A1A2E]">hello@mindfulhorizons.com</p>
                   </div>
                 </div>
                 <div className="flex gap-3 p-3 bg-[#F5F1EC] rounded-lg">
-                  <Phone className="w-5 h-5 text-[#6B9E84] flex-shrink-0 mt-0.5" />
+                  <Phone className="w-5 h-5 text-[#5A8D73] flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-xs font-semibold text-[#6B6B6B]">Phone</p>
                     <p className="text-sm text-[#1A1A2E]">(415) 555-MIND</p>
                   </div>
                 </div>
                 <div className="flex gap-3 p-3 bg-[#F5F1EC] rounded-lg">
-                  <MapPin className="w-5 h-5 text-[#6B9E84] flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-[#5A8D73] flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-xs font-semibold text-[#6B6B6B]">Location</p>
                     <p className="text-sm text-[#1A1A2E]">San Francisco, CA</p>
@@ -123,7 +123,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your name"
-                    className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B9E84] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5A8D73] focus:border-transparent"
                     required
                   />
                 </div>
@@ -142,7 +142,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="your@email.com"
-                    className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B9E84] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5A8D73] focus:border-transparent"
                     required
                   />
                 </div>
@@ -161,7 +161,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="How can we help?"
-                    className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B9E84] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5A8D73] focus:border-transparent"
                     required
                   />
                 </div>
@@ -180,15 +180,15 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     onChange={handleChange}
                     placeholder="Tell us what's on your mind..."
                     rows={4}
-                    className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B9E84] focus:border-transparent resize-none"
+                    className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5A8D73] focus:border-transparent resize-none"
                     required
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full px-4 py-3 bg-[#6B9E84] text-[#FAFAF7] font-semibold rounded-lg hover:bg-[#5A8D73] transition-colors duration-300"
-                >
+                  <button
+                    type="submit"
+                    className="w-full px-4 py-3 bg-[#5A8D73] text-[#FAFAF7] font-semibold rounded-lg hover:bg-[#4A7D63] transition-colors duration-300 shadow-md hover:shadow-lg"
+                  >
                   Send Message
                 </button>
 

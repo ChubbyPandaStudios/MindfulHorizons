@@ -68,7 +68,7 @@ export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
             // Success State
             <div className="text-center space-y-4">
               <div className="flex justify-center">
-                <CheckCircle className="w-16 h-16 text-[#6B9E84]" />
+                <CheckCircle className="w-16 h-16 text-[#5A8D73]" />
               </div>
               <p className="text-lg font-semibold text-[#1A1A2E]">
                 Thank you for your interest!
@@ -77,7 +77,7 @@ export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
                 We&apos;ve received your enrollment interest. Dr. Elena&apos;s team will reach out within 48 hours to welcome you and discuss next steps.
               </p>
               <div className="pt-4 flex gap-3">
-                <Leaf className="w-5 h-5 text-[#6B9E84] flex-shrink-0" />
+                <Leaf className="w-5 h-5 text-[#5A8D73] flex-shrink-0" />
                 <p className="text-sm text-[#6B6B6B]">
                   Get ready to transform your life. You&apos;re about to start an incredible journey.
                 </p>
@@ -100,7 +100,7 @@ export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B9E84] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5A8D73] focus:border-transparent"
                   required
                 />
               </div>
@@ -119,7 +119,7 @@ export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
-                  className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B9E84] focus:border-transparent"
+                  className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5A8D73] focus:border-transparent"
                   required
                 />
               </div>
@@ -138,14 +138,14 @@ export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
                   onChange={handleChange}
                   placeholder="Share your goals or what brings you here..."
                   rows={4}
-                  className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6B9E84] focus:border-transparent resize-none"
+                  className="w-full px-4 py-2 border border-[#E8E4DE] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5A8D73] focus:border-transparent resize-none"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-4 py-3 bg-[#6B9E84] text-[#FAFAF7] font-semibold rounded-lg hover:bg-[#5A8D73] transition-colors duration-300"
+                className="w-full px-4 py-3 bg-[#5A8D73] text-[#FAFAF7] font-semibold rounded-lg hover:bg-[#4A7D63] transition-colors duration-300 shadow-md hover:shadow-lg"
               >
                 Complete Enrollment
               </button>
