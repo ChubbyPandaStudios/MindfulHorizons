@@ -42,7 +42,7 @@ export default function Header({ onEnrollClick }: HeaderProps) {
         className="fixed top-0 left-0 h-[3px] bg-[#5A8D73] z-[60] transition-all duration-150 ease-out origin-left"
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/90 backdrop-blur-md'}`}>
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white border-b border-[#E8E4DE]'}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
