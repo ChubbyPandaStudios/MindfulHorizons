@@ -42,12 +42,12 @@ export default function Header({ onEnrollClick }: HeaderProps) {
         className="fixed top-0 left-0 h-[3px] bg-[#5A8D73] z-[60] transition-all duration-150 ease-out origin-left"
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#5A8D73] shadow-md' : 'bg-transparent backdrop-blur-md'} text-[#FAFAF7]`}>
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/90 backdrop-blur-md'}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl sm:text-2xl font-bold text-[#FAFAF7]">
+            <h1 className="text-xl sm:text-2xl font-bold text-[#5A8D73]">
               Mindful Horizons
             </h1>
           </div>
@@ -56,25 +56,25 @@ export default function Header({ onEnrollClick }: HeaderProps) {
           <nav className="hidden md:flex gap-8 items-center">
             <a
               href="#about"
-              className="hover:text-[#F5F1EC] transition-colors duration-300"
+              className="text-[#1A1A2E] hover:text-[#5A8D73] transition-colors duration-300"
             >
               About
             </a>
             <a
               href="#benefits"
-              className="hover:text-[#F5F1EC] transition-colors duration-300"
+              className="text-[#1A1A2E] hover:text-[#5A8D73] transition-colors duration-300"
             >
               Benefits
             </a>
             <a
               href="#pricing"
-              className="hover:text-[#F5F1EC] transition-colors duration-300"
+              className="text-[#1A1A2E] hover:text-[#5A8D73] transition-colors duration-300"
             >
               Pricing
             </a>
             <a
               href="#testimonials"
-              className="hover:text-[#F5F1EC] transition-colors duration-300"
+              className="text-[#1A1A2E] hover:text-[#5A8D73] transition-colors duration-300"
             >
               Testimonials
             </a>
@@ -89,7 +89,7 @@ export default function Header({ onEnrollClick }: HeaderProps) {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 hover:bg-[#5A8D73] rounded-lg transition-colors"
+            className="md:hidden p-2 text-[#1A1A2E] hover:bg-[#F5F1EC] rounded-lg transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -102,31 +102,31 @@ export default function Header({ onEnrollClick }: HeaderProps) {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden pb-4 space-y-3 animate-fade-in bg-[#5A8D73]/95 px-4 backdrop-blur-md absolute w-full left-0 shadow-lg">
+          <nav className="md:hidden pb-4 space-y-3 animate-fade-in bg-white px-4 absolute w-full left-0 shadow-lg border-t border-[#E8E4DE]">
             <a
               href="#about"
-              className="block hover:text-[#F5F1EC] transition-colors pt-4"
+              className="block text-[#1A1A2E] hover:text-[#5A8D73] transition-colors pt-4"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </a>
             <a
               href="#benefits"
-              className="block hover:text-[#F5F1EC] transition-colors"
+              className="block text-[#1A1A2E] hover:text-[#5A8D73] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Benefits
             </a>
             <a
               href="#pricing"
-              className="block hover:text-[#F5F1EC] transition-colors"
+              className="block text-[#1A1A2E] hover:text-[#5A8D73] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Pricing
             </a>
             <a
               href="#testimonials"
-              className="block hover:text-[#F5F1EC] transition-colors"
+              className="block text-[#1A1A2E] hover:text-[#5A8D73] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Testimonials

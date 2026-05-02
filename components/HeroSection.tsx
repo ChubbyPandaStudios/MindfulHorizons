@@ -19,12 +19,12 @@ export default function HeroSection({ onEnrollClick }: HeroSectionProps) {
       }`} />
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left: Image */}
           <div className={`flex justify-center md:justify-start transition-all duration-1000 ${
             isIntersecting ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
           }`}>
-            <div className="relative w-80 h-96 md:w-96 md:h-[450px] rounded-2xl overflow-hidden shadow-2xl animate-float-bob">
+            <div className="relative w-full max-w-[320px] h-72 sm:h-80 md:w-96 md:h-[450px] rounded-2xl overflow-hidden shadow-2xl animate-float-bob">
               <Image
                 src="/images/dr-elena.jpg"
                 alt="Dr. Elena Voss - Mental Wellness Coach"
@@ -62,7 +62,7 @@ export default function HeroSection({ onEnrollClick }: HeroSectionProps) {
 
             <button
               onClick={onEnrollClick}
-              className="inline-block px-8 py-3 bg-[#5A8D73] text-[#FAFAF7] font-semibold rounded-lg hover:bg-[#4A7D63] hover:shadow-xl transition-all duration-300 transform hover:scale-105 shimmer-sweep ripple-effect shadow-md"
+              className="inline-block w-full sm:w-auto px-8 py-3 bg-[#5A8D73] text-[#FAFAF7] font-semibold rounded-lg hover:bg-[#4A7D63] hover:shadow-xl transition-all duration-300 transform hover:scale-105 shimmer-sweep ripple-effect shadow-md text-center"
             >
               Enroll Now – 8-Week Program
             </button>

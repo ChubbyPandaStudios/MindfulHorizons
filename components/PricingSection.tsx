@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckCircle } from 'lucide-react';
+import { CircleCheck as CheckCircle } from 'lucide-react';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
 
 interface PricingSectionProps {
@@ -35,7 +35,7 @@ export default function PricingSection({ onEnrollClick }: PricingSectionProps) {
           </p>
         </div>
 
-        <div className={`bg-white rounded-2xl shadow-2xl p-8 md:p-12 transition-all duration-1000 delay-300 relative border border-[#5A8D73]/20 ${
+        <div className={`bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12 transition-all duration-1000 delay-300 relative border border-[#5A8D73]/20 ${
           isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
           {/* Inner Glow Accent */}

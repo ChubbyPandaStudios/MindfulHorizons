@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div
               key={index}
-              className="w-[350px] md:w-[450px] flex-shrink-0 bg-white rounded-2xl p-8 shadow-lg border border-[#5A8D73]/10 hover:border-[#5A8D73]/30 transition-colors"
+              className="w-[280px] sm:w-[350px] md:w-[450px] flex-shrink-0 bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-[#5A8D73]/10 hover:border-[#5A8D73]/30 transition-colors"
             >
               {/* Rating */}
               <div className="flex gap-1 mb-4">
